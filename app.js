@@ -24,13 +24,11 @@ async function login() {
 
     if (result.success) {
 
-        window.location.href =
-            result.pdfUrl;
+        window.location.href = result.pdfUrl;
 
     } else {
 
-        document.getElementById("message")
-            .innerText =
+        document.getElementById("message").innerText =
             result.message || "ログインに失敗しました";
 
     }
