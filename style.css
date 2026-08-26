@@ -1,14 +1,21 @@
-.container {
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.login-box {
     max-width: 640px;
     margin: 50px auto;
     padding: 40px;
     background: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .company-name {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #333333;
     margin-bottom: 10px;
@@ -34,6 +41,7 @@ input {
     margin-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid #999999;
+    border-radius: 4px;
     font-size: 18px;
 }
 
@@ -42,6 +50,7 @@ button {
     height: 52px;
     box-sizing: border-box;
     border: 1px solid #999999;
+    border-radius: 4px;
     background: #ffffff;
     font-size: 22px;
     cursor: pointer;
@@ -55,6 +64,7 @@ button:hover {
     font-size: 14px;
     color: #666666;
     margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .error {
@@ -66,5 +76,9 @@ button:hover {
 .success {
     color: #2e7d32;
     font-weight: bold;
+    margin-top: 20px;
+}
+
+#message {
     margin-top: 20px;
 }
