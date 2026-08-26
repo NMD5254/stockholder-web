@@ -90,4 +90,37 @@ button:hover {
 }
 
 /* スマホ対応 */
-@media screen and (max-width: 768px
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .login-box {
+        margin: 10px auto;
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .company-name {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 18px;
+        height: 48px;
+    }
+
+    button {
+        height: 46px;
+        font-size: 18px;
+    }
+}
