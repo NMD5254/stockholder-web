@@ -1,9 +1,7 @@
 async function login() {
 
     const stockNo =
-        document.getElementById("stockNo").value;
-
-    const authCode =
+        document.getElementById( const authCode =
         document.getElementById("authCode").value;
 
     const message =
@@ -12,33 +10,46 @@ async function login() {
     message.innerText = "";
     message.className = "";
 
-    const response = await fetch(
-        "https://func-stockholder-auth22-ebg8c2cqb3eqdthu.japanwest-01.azurewebsites.net/api/login",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                stockNo: stockNo,
-                authCode: authCode
-            })
+    try {
+
+        const response = await fetch(
+            "https://func-stockholder-auth22-ebg8c2cqb3eqdthu.japanwest-01.azurewebsites.net/api/login",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    stockNo: stockNo,
+                    authCode: authCode
+                })
+            }
+        );
+
+        const result =
+            await response.json();
+
+        if (result.success) {
+
+            window.location.href =
+                result.pdfUrl;
+
+        } else {
+
+            message.innerText =
+                result.message ||
+                "株主番号または認証コードが正しくありません。";
+
+            message.className =
+                "error";
         }
-    );
 
-    const result = await response.json();
-
-    if (result.success) {
-
-        window.location.href =
-            result.pdfUrl;
-
-    } else {
+    } catch (error) {
 
         message.innerText =
-            result.message ||
-            "株主番号または認証コードが正しくありません。";
+            "システムに接続できません。しばらくしてから再度お試しください。";
 
-        message.className = "error";
+        message.className =
+            "error";
     }
 }
