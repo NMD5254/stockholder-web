@@ -13,7 +13,7 @@ async function login() {
     message.className = "";
 
     const response = await fetch(
-        "https://func-stockholder-auth22-ebg8c2cqb3eqdthu.japanwest-01.azurewebsites.net/api/authenticate",
+        "https://func-stockholder-auth22-ebg8c2cqb3eqdthu.japanwest-01.azurewebsites.net/api/login",
         {
             method: "POST",
             headers: {
