@@ -6,8 +6,14 @@ async function login() {
     const authCode =
         document.getElementById("authCode").value;
 
+    const message =
+        document.getElementById("message");
+
+    message.innerText = "";
+    message.className = "";
+
     const response = await fetch(
-        "https://func-stockholder-auth22-ebg8c2cqb3eqdthu.japanwest-01.azurewebsites.net/api/login",
+        "https://func-stockholder-auth22-ebg8c2cqb3eqdthu.japanwest-01.azurewebsites.net/api/authenticate",
         {
             method: "POST",
             headers: {
@@ -24,12 +30,15 @@ async function login() {
 
     if (result.success) {
 
-        window.location.href = result.pdfUrl;
+        window.location.href =
+            result.pdfUrl;
 
     } else {
 
-        document.getElementById("message").innerText =
-            result.message || "株主番号または認証コードが正しくありません。";
-message.className = "error";
+        message.innerText =
+            result.message ||
+            "株主番号または認証コードが正しくありません。";
+
+        message.className = "error";
     }
 }
