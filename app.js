@@ -30,6 +30,6 @@ async function login() {
 
         document.getElementById("message").innerText =
             result.message || "株主番号または認証コードが正しくありません。";
-
+message.className = "error";
     }
 }
