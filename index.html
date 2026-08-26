@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>株主専用ページ</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>事業報告書閲覧サイト</title>
+
+    style.css
 </head>
+
 <body>
 
     <div class="login-box">
 
-        <h1>株主専用ページ</h1>
+        <div class="company-name">
+            ○○株式会社
+        </div>
+
+        <h1>事業報告書閲覧サイト</h1>
+
+        <label for="stockNo">
+            株主番号
+        </label>
 
         <input
             id="stockNo"
-            placeholder="株主番号">
+            placeholder="例：0645">
+
+        <label for="authCode">
+            認証コード
+        </label>
 
         <input
             id="authCode"
-            placeholder="認証コード">
+            placeholder="例：ABCD12">
+
+        <p class="guide-text">
+            ※通知文に記載された株主番号と認証コードを入力してください。
+        </p>
 
         <button onclick="login()">
             ログイン
@@ -28,7 +48,8 @@
 
     </div>
 
-    <script src="app.js"></script>
+    app.js
 
 </body>
+
 </html>
