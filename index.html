@@ -15,17 +15,21 @@
     <div class="login-box">
 
         <div class="company-name">
-            ○○株式会社
+            日本磁力選鉱株式会社
         </div>
 
-        <h1>事業報告書閲覧サイト</h1>
+        <h1>
+            事業報告書閲覧サイト
+        </h1>
 
         <label for="stockNo">
-            株主番号
+            株主番号（ログインID）
         </label>
 
         <input
             id="stockNo"
+            type="text"
+            maxlength="4"
             placeholder="例：0645">
 
         <label for="authCode">
@@ -34,6 +38,8 @@
 
         <input
             id="authCode"
+            type="text"
+            maxlength="6"
             placeholder="例：ABCD12">
 
         <p class="guide-text">
@@ -48,7 +54,8 @@
 
     </div>
 
-    .js"></script>
+    app.js
 
 </body>
+
 </html>
