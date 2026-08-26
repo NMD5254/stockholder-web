@@ -9,8 +9,14 @@ async function login() {
     const message =
         document.getElementById("message");
 
-    message.innerText = "";
+    const loginButton =
+        document.querySelector("button");
+
+    message.innerText = "認証中...";
     message.className = "";
+
+    loginButton.disabled = true;
+    loginButton.innerText = "認証中...";
 
     try {
 
@@ -42,7 +48,11 @@ async function login() {
                 result.message ||
                 "株主番号または認証コードが正しくありません。";
 
-            message.className = "error";
+            message.className =
+                "error";
+
+            loginButton.disabled = false;
+            loginButton.innerText = "ログイン";
         }
 
     } catch (error) {
@@ -50,7 +60,11 @@ async function login() {
         message.innerText =
             "システムに接続できません。しばらくしてから再度お試しください。";
 
-        message.className = "error";
+        message.className =
+            "error";
+
+        loginButton.disabled = false;
+        loginButton.innerText = "ログイン";
 
         console.error(error);
     }
