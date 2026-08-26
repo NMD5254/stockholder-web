@@ -1,23 +1,70 @@
-body{
-    font-family:sans-serif;
-    background:#f5f5f5;
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.login-box{
-    width:400px;
-    margin:100px auto;
-    background:white;
-    padding:30px;
-    border-radius:8px;
+.company-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
 }
 
-input{
-    width:100%;
-    padding:10px;
-    margin-bottom:10px;
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-button{
-    width:100%;
-    padding:10px;
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    font-size: 18px;
+}
+
+button {
+    width: 100%;
+    height: 52px;
+    box-sizing: border-box;
+    border: 1px solid #999999;
+    background: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f5f5f5;
+}
+
+.guide-text {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: #c62828;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.success {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 20px;
 }
