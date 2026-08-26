@@ -1,7 +1,9 @@
 async function login() {
 
     const stockNo =
-        document.getElementById( const authCode =
+        document.getElementById("stockNo").value;
+
+    const authCode =
         document.getElementById("authCode").value;
 
     const message =
@@ -40,8 +42,7 @@ async function login() {
                 result.message ||
                 "株主番号または認証コードが正しくありません。";
 
-            message.className =
-                "error";
+            message.className = "error";
         }
 
     } catch (error) {
@@ -49,7 +50,8 @@ async function login() {
         message.innerText =
             "システムに接続できません。しばらくしてから再度お試しください。";
 
-        message.className =
-            "error";
+        message.className = "error";
+
+        console.error(error);
     }
 }
