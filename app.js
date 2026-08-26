@@ -29,7 +29,7 @@ async function login() {
     } else {
 
         document.getElementById("message").innerText =
-            result.message || "ログインに失敗しました";
+            result.message || "株主番号または認証コードが正しくありません。";
 
     }
 }
